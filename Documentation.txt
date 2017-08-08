@@ -1,0 +1,42 @@
+								     Documentation
+								Patent Citation Network
+
+This project was mainly concentrated on extracting all the information about a patent, which includes several fields such as, Patent Number, Filed Date, Abstract, 
+Citied Patent number and so on. This process was carried out for about 1 million patent numbers. The goal of the project was to find out connected components
+using company names, which will be carried out in future.
+
+Prerequisites
+This section tells you about what softwares, what IDE and on what platform did we run the project.
+To extract all the patent information from webpage and to convert those webpage into a notepad file delimited by '@', Python 2.7/Python 3.6 were used.
+This project also requires you to install Rstudio, in order to find out connected component.
+
+Download R and Rstudio for windows
+https://cran.r-project.org/bin/windows/base/
+https://www.rstudio.com/products/rstudio/download2/
+
+Download R and Rstudio for Mac OS
+https://cran.r-project.org/bin/macosx/
+https://www.rstudio.com/products/rstudio/download2/
+
+Python can be ran on IDE like Visual Studio 2015, Anaconda
+One can find both Python 3.6 and Python 2.7 for both Mac OS and Windows here https://www.python.org/downloads/
+
+Implementation.
+First a list containing all patent numbers is copied onto a notepad, upon running the code, the code copies patent numbers and feeds one patent number at a time to 
+URL, which is directed to USPTO website. The result of this program will be a webpage which is stored in user specified location.
+
+Next these webpages are further used by another program, required fields for the further execution are extracted from the webpage and are copied onto a notepad,
+the fields are delimited by '@'
+
+To obtain the final result, that is to have a CSV file. The contents in notepad are copied onto a CSV file and seperated into columns delimited by '@'.
+
+This happens to be a 3 step process. In future all these three steps can be merged into one, that is when a patent number is fed into a URL, it automatically 
+obtains the webpage and converts that webpage into CSV and using the data present in CSV and a R code, connected components will be obatined.
+
+Authors
+Sridhar Radhakrishnan - Advisor
+Bhargav Kumar Nyamala 
+Sudhindra Gopal Krishna
+Vinayak Banavi
+
+
