@@ -2,7 +2,7 @@ import urllib.request
 import time
 
 #Open the file to read the patent ids to get source code of these pages
-with open('C:/Users/Bhargav/Desktop/SridharResults/remaining-ids.txt', 'r') as infile:
+with open('C:/Users/Desktop/patent-ids.txt', 'r') as infile:
 
     data = infile.read()  # Read the contents of the file into memory.
 
@@ -22,7 +22,7 @@ for i in range(length):
     page = urllib.request.urlopen(bv)
     time.sleep(1)
     #Creating a new html file with the patent id as the file name
-    text_file = open('F:/work/319to429/{}.html'.format(my_list[i]), "wb")
+    text_file = open('F:/work/patenthtml/{}.html'.format(my_list[i]), "wb")
     #Writing html source code to the created html file
     text_file.write(page.read())
     #closing the file
