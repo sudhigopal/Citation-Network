@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 #Add external library beautiful soup inorder to scrap data from html files
 
 
-with open('F:/work/Sudhindra/eightlakh.txt', 'r') as infile:
+with open('F:/work/patent.txt', 'r') as infile:
 
     data = infile.read()  # Read the contents of the file into memory.
 
@@ -19,7 +19,7 @@ afterBracket=''
 for i in range(length):
     print("Printed Element",i,"eightlakh")
     #Read the file using beautiful soup
-    soup = BeautifulSoup(open("F:/work/Sudhindra/eightlakh/{}.html".format(my_list[i])),"html.parser")
+    soup = BeautifulSoup(open("F:/work/patenthtml/{}.html".format(my_list[i])),"html.parser")
     divs = soup.findAll("table")
     for dividx,div in enumerate(divs):
         row = ''
@@ -132,6 +132,6 @@ for i in range(length):
     FieldofSearch=fieldSea.replace(" ","")
     completeRow = []
     completeRow = Inventors+'@'+ComapnyName+'@'+PatentNumber+'@'+PatentDate+'@'+ApplicationFiledDate+'@'+CurrentUsClass+'@'+CurrentCPCClass+'@'+CurrentInternationalClass+'@'+FieldofSearch+'@'+Citedpatents+'@'+foreignPatents+'@'+abstractData
-    with open("F:/work/Sudhindra/eightlakhresults.txt", "a") as write_text:
+    with open("F:/work/patentcsv.txt", "a") as write_text:
         write_text.write(completeRow+"\n")
 
